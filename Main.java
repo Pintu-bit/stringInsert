@@ -422,22 +422,27 @@ class StringInsert {
         return count;
     }
 
-    void split(char ch){
-       String result [] = new String[this.wordCount(ch)];
-       int start = 0, end = 0,idx = 0 ;
-       for(int i = 0; i < size; i++){
-           if(this.str[i] == ch){
-               start = end;
-               end = i;
-               result[idx++] = this.subString(start,end);
-               //System.out.println(start+" "+end);
-           }
-       }
+    void split(char ch) {
+        int wordCount = this.wordCount(ch);
+        if (wordCount == 1) {
+            System.out.println("Splitting character is not found ");
+        } else {
+            String result[] = new String[this.wordCount(ch)];
+            int start = 0, end = 0, idx = 0;
+            for (int i = 0; i < size; i++) {
+                if (this.str[i] == ch) {
+                    start = end;
+                    end = i;
+                    result[idx++] = this.subString(start, end);
+                    //System.out.println(start+" "+end);
+                }
+            }
 
-        result[idx++] = this.subString(end,this.size);
-       for(int i = 0; i < result.length; i++){
-           System.out.println(result[i]);
-       }
+            result[idx++] = this.subString(end, this.size);
+            for (int i = 0; i < result.length; i++) {
+                System.out.println(result[i]);
+            }
+        }
     }
 }
 
@@ -468,7 +473,7 @@ public class Main {
        // System.out.println(si.isSpecialCharacter());
         //System.out.println(si.removeSpecialCharacter());
         //System.out.println(si.compareToIgnoreCase("pintU"));
-        si.split('G');
+        si.split(' ');
         //si.viewAll();
     }
 }
