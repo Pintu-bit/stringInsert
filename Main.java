@@ -470,7 +470,7 @@ public class Main {
         //System.out.println(si.removeSpace());
         //System.out.println(si.upperCase());
         //System.out.println(si.lowerCase());
-       // System.out.println(si.isSpecialCharacter());
+        // System.out.println(si.isSpecialCharacter());
         //System.out.println(si.removeSpecialCharacter());
         //System.out.println(si.compareToIgnoreCase("pintU"));
         si.split(' ');
