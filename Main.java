@@ -446,34 +446,3 @@ class StringInsert {
     }
 }
 
-
-public class Main {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        char[] charArray = new char[input.length()];
-        int count = input.length();
-        for(int i = 0; i < input.length(); i++) {
-            charArray[i] = input.charAt(i);
-        }
-        StringInsert si = new StringInsert(charArray, count);
-        //System.out.println(si.convertToString());
-
-        //System.out.println(si.replaceAllCharacter('o','p'));
-        //si.viewAll();
-        //System.out.println(si.find("int"));
-        //System.out.println(si.addString(" Gorai"));
-        //System.out.println(si.replaceLastCharacter('p','o'));
-        //System.out.println(si.addAtIndex(1,'X'));
-        //System.out.println(si.replaceStr("intu","jackbu"));
-        //System.out.println(si.removeSpace());
-        //System.out.println(si.upperCase());
-        //System.out.println(si.lowerCase());
-        // System.out.println(si.isSpecialCharacter());
-        //System.out.println(si.removeSpecialCharacter());
-        //System.out.println(si.compareToIgnoreCase("pintU"));
-        si.split(' ');
-        //si.viewAll();
-    }
-}
